@@ -3,7 +3,7 @@ import {useState,useEffect} from "react";
 import {api} from "../https/api";
 import {useParams} from "react-router-dom";
 
-const GamePinCode = () => {
+const GamePinCode = ({el}) => {
 
     const {id} = useParams()
     const [user, setUser] = useState({})
@@ -21,9 +21,9 @@ const GamePinCode = () => {
             <div >
                 <div className="gameUsersWer">
                     <h2 className="gameUsersWerH1">Присоединились </h2>
-                    <ol>
-                        {user?.name}
-                    </ol>
+                    <div>
+
+                    </div>
                 </div>
 
                 <div className="gameUsersName">
