@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.appBg{
+    background: url("./img/Frame 26.png") no-repeat center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 600px;
+}
+
+.appH1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.heroAdmin{
+    background: url("./img/Frame 28.png") no-repeat center/cover;
+    height: 500px;
+}
+.adminModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.heroFon {
+background: url("./img/Frame 36.png") no-repeat center/cover;
+
+}
+
+.HEADER {
+    background: #001355;
+ }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.language {
+    background: #6918B4;
+    width: 49px;
+    height: 23px;
+    border-radius: 19px;
+    border: none;
+    color: white;
+}
+
+.Hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    position: absolute;
+    background: #012192;
+    filter: blur(196px);
+    width: 363px;
+    height: 363px;
+}
+
+.heroBtn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    width: 383px;
+    height: 75px;
+    background: #6918B4;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.subModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 350px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.58);    border-radius: 4px;
+ }
+
+.winModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminH2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+ol {
+    list-style: circle;
+}
+
+.adminInput {
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 239px;
+    height: 42px;
+}
+
+.adminBtn {
+    border: none;
+    margin: 20px;
+    background: #6918B4;
+    border-radius: 10px;
+    width: 182px;
+    height: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.cris {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -300px;
+}
+
+.userFon {
+    background: #001355;
+}
+
+.userCircle {
+    margin-left: -100px;
+    margin-top: -90px;
+    background: #012192;
+    width: 393px;
+    height: 393px;
+    box-shadow: 13px 10px 14px rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+}
+
+.userTriangle {
+    margin-left: 900px;
+    margin-top: -300px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 427px;
+    height: 427px;
+    background: #6918B4;
+    box-shadow: -12px 22px 17px rgba(0, 0, 0, 0.29);
+    transform: rotate(52deg);
+}
+
+.userCont {
+
+    width: 1200px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.userPin {
+    top: 300px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userInput {
+    padding: 10px 0 10px 66px;
+    width: 291px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    color: #000000;
+    background: #EBEBEB;
+    border-radius: 7px;
+}
+
+.userBtn {
+    width: 300px;
+    height: 65px;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+    border: none;
+    background: #6918B4;
+    border-radius: 15px;
+}
+
+.gameMin {
+background: url("./img/Frame 28.png") no-repeat center/cover;
+height: 500px;
+
+}
+
+.gameMinJus {
+    height: 64px;
+    border-radius: 5px;
+    padding: 20px;
+    background: #FFFFFF;
+    display: flex;
+    width: 700px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gameBig {
+    display: flex;
+    align-items: center;
+    padding: 20px
+}
+
+.gameBtn {
+    cursor: pointer;
+    margin: 10px;
+    background: #6918B4;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    width: 145px;
+    height: 64px;
+}
+
+.gameMinH31 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0.5;
+}
+
+.gameMinH30 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+}
+
+.gameHeight{
+    height: 500px;
+}
+.gameMinH1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+    margin-left: 26px;
+}
+
+.gameUsersPin {
+    display: flex;
+    align-items: center;
+     width: 251px;
+    height: 63px;
+    background: #EBEBEB;
+    border-radius: 3px;
+}
+
+.gameUserPinBac {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 101px;
+    height: 100%;
+    background: #6918B4;
+    clip-path: polygon(71% 0, 100% 50%, 64% 100%, 0 100%, 0 0);
+}
+
+.gameUserPinBacH1 {
+    margin: 10px;
+    color: #FFFFFF;
+    font-size: 29px;
+}
+
+
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.gameUsersName{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.gameUsersWer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.gameUsersBtn {
+    width: 352px;
+    height: 65px;
+    border: none;
+    background: #6918B4;
+    border-radius: 9px;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.gameUsersWerH1 {
+    color: #FFFFFF;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 20px;
+}
+
+.Progress {
+ background: url("./img/Frame 28.png") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.progress {
+    width: 500px;
+    height: 10px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: solid 1px gray;
+ }
+
+.progressBac {
+    width: 0;
+    height: 10px;
+    background: #6918B4;
+    position: relative;
+    animation-name: progress;
+    animation-duration: 9s;
+     animation-iteration-count: 1;
+    animation-delay: 2s;
+}
+
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.progressH1 {
+    color: #FFFFFF;
+}
+.progressCircleMini {
+    width: 180px;
+    border: solid 1px gray;
+    border-radius: 50%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressCircleSpan {
+    width: 10px;
+}
+
+
+
+
+
