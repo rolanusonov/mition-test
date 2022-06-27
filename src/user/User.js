@@ -15,19 +15,13 @@ import UserMini from "./UserMini";
      return (
         <div className="userFon">
             <div className="container">
-                <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <div  >
                     <div className="userPin">
                         <input className="userInput" type="password" placeholder="PIN-код игры"/>
                         <button className="userBtn">Подвердить</button>
                     </div>
                 </div>
 
-                <div className="userCont">
-                    <div className="userCircle">
-                    </div>
-                    <div className="userTriangle">
-                    </div>
-                </div>
                 {
                     catalog.map(el => (
                         <UserMini el={el} key={el.id}/>

@@ -197,37 +197,6 @@ ol {
     margin-top: -300px;
 }
 
-.userFon {
-    background: #001355;
-}
-
-.userCircle {
-    margin-left: -100px;
-    margin-top: -90px;
-    background: #012192;
-    width: 393px;
-    height: 393px;
-    box-shadow: 13px 10px 14px rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-}
-
-.userTriangle {
-    margin-left: 900px;
-    margin-top: -300px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    width: 427px;
-    height: 427px;
-    background: #6918B4;
-    box-shadow: -12px 22px 17px rgba(0, 0, 0, 0.29);
-    transform: rotate(52deg);
-}
-
-.userCont {
-
-    width: 1200px;
-    height: 700px;
-    overflow: hidden;
-}
 
 .userPin {
     top: 300px;
