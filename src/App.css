@@ -237,7 +237,7 @@ ol {
 
 .gameMin {
 background: url("./img/Frame 28.png") no-repeat center/cover;
-height: 500px;
+height: 100%;
 
 }
 
@@ -328,7 +328,9 @@ height: 500px;
     color: #FFFFFF;
     font-size: 29px;
 }
-
+.gamePin{
+    margin: 10px;
+}
 
 .lds-grid div {
     position: absolute;
@@ -406,14 +408,12 @@ height: 500px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding: 50px;
 }
 
-.gameUsersWer{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+
 .gameUsersBtn {
+    cursor: pointer;
     width: 352px;
     height: 65px;
     border: none;
@@ -421,15 +421,40 @@ height: 500px;
     border-radius: 9px;
     font-size: 24px;
     color: #FFFFFF;
-}
+ }
 
 .gameUsersWerH1 {
+    padding: 10px;
     color: #FFFFFF;
     font-size: 30px;
     line-height: 37px;
-    margin: 20px;
-}
+  }
+ .gameUserJus{
+     padding: 10px;
+ }
+.gameUserH1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 199px;
+    height: 46px;
+     background: #EBEBEB;
+    border-radius: 4px;
+     font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 24px;
+    color: #000000;
+ }
 
+.gameUserLength{
+    color: #FFFFFF;
+    padding: 10px;
+}
+.gameUserMAr{
+    margin: 50px;
+}
 .Progress {
  background: url("./img/Frame 28.png") no-repeat center/cover;
     display: flex;
@@ -485,8 +510,101 @@ height: 500px;
 .progressCircleSpan {
     width: 10px;
 }
+.spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
+    margin-left: -260px;
+    margin-top: 90px;
+}
+.spinnerH1{
+    color: #FFFFFF;
+    width: 500px;
+}
+.lds-grid {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+.timeSpin{
+color: #FFFFFF;
+    font-size: 50px;
+    position: relative;
+    animation-name: time;
+    animation-duration: 9s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+}
+@keyframes time {
+0%{
+display: none   }
+    100%{
+        color: black;
+    }
+}
 
 
 

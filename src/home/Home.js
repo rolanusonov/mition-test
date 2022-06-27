@@ -19,9 +19,9 @@ const Home = () => {
                 <Route path="/admin" element={<Admin/>} />
                 <Route path="/gameCreateBig" element={<PrivateRoute><GameCreateBig/></PrivateRoute>}/>
                 <Route path="/user" element={<User/>} />
-                <Route path="/GameUsersLoading" element={<GameUsersLoading/>} />
-                <Route path="/user/detail/:id" element={<GamePinCode/>} />
+                 <Route path="/gameUsersLoading" element={<GameUsersLoading/>} />
                 <Route path="/theme/:id" element={<GameUsers/>} />
+                <Route path="/pin" element={<GamePinCode/>} />
 
             </Routes>
 

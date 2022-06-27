@@ -1,40 +1,48 @@
-import React from 'react';
-import {useState,useEffect} from "react";
-import {api} from "../https/api";
-import {useParams} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import { useNavigate } from "react-router-dom";
 
-const GamePinCode = ({el}) => {
 
-    const {id} = useParams()
-    const [user, setUser] = useState({})
+const GamePinCode = () => {
+    let data = new Date()
+    console.log(data)
+    const [time , setTime] = useState(5)
 
+
+    const router = useNavigate()
+    console.log(router , "router")
 
     useEffect(() => {
-        api(`/api/v1/user/detail/${id}`)
-            .then(({data}) => {
-                setUser(data)
-            })
-    }, [])
+        const start = () => {
+            setTimeout(() => {
+                setTime(time - 1)
+            },1000)
+        }
+
+        if (time === 0) {
+            setTime(0)
+            router("/gameCreateBig")
+        } else {
+            start()
+        }
+    } , [time])
 
     return (
-        <div>
-            <div >
-                <div className="gameUsersWer">
-                    <h2 className="gameUsersWerH1">Присоединились </h2>
-                    <div>
+ <div>
+     <section id="package" className="mb-14 pt-[40px]">
 
-                    </div>
-                </div>
+         <div className="container mx-auto">
+             <div className="flex justify-center flex-col items-center mt-4">
+                 <h1 className="font-bold text-white lg:text-[36px] md:text-[32px] text-[26px] mt-10 lg:mb-6">ВЫ ВЕРНЕТЕСЬ ЧЕРЕЗ {time} СЕК</h1>
+                 <p className="text-center text-white">
+                     Присоединяйтесь к международному сообществу учеников
+                     Кайдзен Школы и
+                     <br/>
+                     становитесь эффективными и счастливыми без хронической занятости и выгорания</p>
+             </div>
+         </div>
+     </section>
 
-                <div className="gameUsersName">
-
-                    <button className="gameUsersBtn">
-                        Начать игру
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+ </div>    );
 };
 
 export default GamePinCode;

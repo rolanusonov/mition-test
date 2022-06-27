@@ -2,12 +2,16 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {api} from "../https/api";
 import { useParams} from "react-router-dom";
-import GamePinCode from "./GamePinCode";
+import {Link} from 'react-router-dom'
+import appLogo from "../img/image 5.png";
+import appLog from "../img/MOTION TEST.png";
 
 const GameUsers = ({el}) => {
     const {id} = useParams()
     const dispatch = useDispatch()
+    const catalog = useSelector((state) => state.catalog)
     const [theme,setTheme] = useState({})
+    const [user,setUser] = useState([])
     useEffect(() => {
         api(`/api/v1/theme/${id}`)
             .then(({data}) => {
@@ -15,7 +19,25 @@ const GameUsers = ({el}) => {
             })
     }, [])
 
+    useEffect(() => {
+        api(`/api/v1/user/`)
+            .then(({data}) => {
+                setUser(data)
+            })
+    },[])
 
+    const res = [];
+
+
+    user.map((item) => {
+        theme?.test_participants?.map((el) => {
+            if (el === item.id) {
+                res.push(item);
+            }
+        });
+    });
+
+    console.log(res)
 
 
     return (
@@ -29,15 +51,52 @@ const GameUsers = ({el}) => {
                                     <div className="gameUserPinBac">
                                         <h1 className="gameUserPinBacH1">ПИН</h1>
                                     </div>
-                                    <h1>{theme?.pin_code}</h1>
+                                    <h1 className="gamePin">{theme?.pin_code}</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <GamePinCode/>
-        </div>
+                      {res.length === 0 ?
+                        <div className="spinner">
+                            <div className="lds-grid">
+                                <div>   <h1 className="spinnerH1 " >В ожидании игроков...</h1> </div>
+
+
+
+                            </div>
+                        </div>
+                        :
+                        <div className="">
+                            <div>
+                                <div className="gameUserMAr">
+                                    <h2 className="gameUsersWerH1">Присоединились </h2>
+                                    <ol>
+                                        {res.map  (el =>  (
+                                            <div className="gameUserJus">
+                                                <h1 className="gameUserH1">{el.name}</h1>
+                                            </div>
+                                        ))}
+                                        <h1 className="gameUserLength">
+                                            Игроки:{res?.length}
+                                        </h1>
+                                    </ol>
+                                </div>
+
+                                <div className="gameUsersName">
+                                    <Link to="/gameUsersLoading">
+                                        <button className="gameUsersBtn">
+                                            Начать игру
+                                        </button>
+                                    </Link>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+         </div>
     );
 };
 
