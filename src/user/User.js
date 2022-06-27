@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux"
 import {useSelector} from "react-redux"
 import {api} from "../https/api"
 import UserMini from "./UserMini";
+import {Link} from "react-router-dom";
  const User = () => {
     const dispatch = useDispatch()
     const catalog = useSelector((state) => state.catalog)
@@ -15,10 +16,12 @@ import UserMini from "./UserMini";
      return (
         <div className="userFon">
             <div className="container">
-                <div  >
+                <div className="">
                     <div className="userPin">
                         <input className="userInput" type="password" placeholder="PIN-код игры"/>
-                        <button className="userBtn">Подвердить</button>
+                     <Link to="/Name">
+                         <button className="userBtn">Подтвердить</button>
+                     </Link>
                     </div>
                 </div>
 

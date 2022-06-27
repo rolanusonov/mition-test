@@ -1,4 +1,5 @@
  import './App.css';
+import './css/user.css'
  import appLogo from "./img/image 5.png";
 import appLog from "./img/MOTION TEST.png";
  import user from "./user/User";
