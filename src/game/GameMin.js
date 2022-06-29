@@ -16,11 +16,6 @@ const GameMin = ({el, id}) => {
                                 <h3 className="gameMinH31">Количество воп.&nbsp; {el.count_question}</h3>
                             </div>
                         </div>
-                        <Link to={`/user/detail/${el.test_participants}/`}>
-                            <button className="gameBtn">
-                                игрок
-                            </button>
-                        </Link>
                         <Link to={`/theme/${el.id}`}>
                             <button className="gameBtn">
                                 Начать
