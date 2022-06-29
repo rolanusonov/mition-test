@@ -1,21 +1,23 @@
-.userFon{
-    background: url("../img/Frame 36.png") no-repeat center;
-    height: 850px;
-}
-.names{
+.userFon {
     background: url("../img/Frame 36.png") no-repeat center;
     height: 850px;
 }
 
-.userPin {
+.names {
+    background: url("../img/Frame 36.png") no-repeat center;
+    height: 850px;
+}
+
+.formDis, .userPin {
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 }
+
 .userInput, .userName {
-    margin-top: 100px;
     padding: 10px 0 10px 66px;
+    margin: 20px;
     width: 291px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -25,5 +27,26 @@
     color: #000000;
     background: #EBEBEB;
     border-radius: 7px;
-    border: none;
-}
+    border: none;}
+/*}*/
+/*.test{*/
+/*padding: 100px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.choice{*/
+/*    padding: 40px;*/
+/*}*/
+/*.wrapper{*/
+/*    display: grid;*/
+/*    grid-template-columns: 300px 2fr ;*/
+/*    padding: 30px;*/
+/*}*/
+/*.question{*/
+/*    background: #ffffff;*/
+/*    width: 400px;*/
+/*    height: 50px;*/
+/*    border-radius: 20px;*/
+/*    text-align: center;*/

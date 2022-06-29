@@ -10,7 +10,8 @@ import GameUsers from "../game/GameUsers";
 import GameUsersLoading from "../game/GameUsersLoading";
 import GamePinCode from "../game/GamePinCode";
 import Name from "../user/Name"
-import Names from "../user/Names"
+import NamesCards from "../user/NamesCards"
+import Test from "../user/Test"
 
 const Home = () => {
     return (
@@ -25,7 +26,8 @@ const Home = () => {
                 <Route path="/theme/:id" element={<GameUsers/>} />
                 <Route path="/pin" element={<GamePinCode/>} />
                  <Route path="/Name" element={<Name/>}/>
-                <Route path="/Names" element={<Names/>}/>
+                 <Route path="/Test" element={<Test/>}/>
+                 <Route path="/NamesCards" element={<NamesCards/>}/>
             </Routes>
 
         </div>
