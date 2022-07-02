@@ -48,7 +48,7 @@ const Name = () => {
                            defaultValue="" {...register("name", {required: true})} className="userName"/>
                     <input type="password" data-rule="number" name="pin" size="90" maxLength="50"
                            defaultValue="" {...register("pin_code", {required: true})} className="userInput"/>
-                    <Link to="/">
+                    <Link to="/Test">
                         <input type="submit" name="btnRunProccess" defaultValue="Отправить" className="userBtn"/>
                     </Link>
                 </form>
