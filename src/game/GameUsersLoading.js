@@ -3,12 +3,8 @@ import {useNavigate} from "react-router-dom";
 
 const GameUsersLoading = () => {
     let data = new Date()
-    console.log(data)
-    const [time , setTime] = useState(11)
-
-
+     const [time , setTime] = useState(11)
     const router = useNavigate()
-    console.log(router , "router")
 
     useEffect(() => {
         const start = () => {
@@ -16,7 +12,6 @@ const GameUsersLoading = () => {
                 setTime(time - 1)
             },1000)
         }
-
         if (time === 0) {
             setTime(0)
             router("/pin")
@@ -30,15 +25,16 @@ const GameUsersLoading = () => {
             <div className="Progress">
                 <div className="progress">
                     <div className="progressBac">
-
+                        
                     </div>
                 </div>
                 <h1 className="progressH1">
                     Идёт загруска
                 </h1>
-             </div>
+                <h1 className="timeLoading">{time}</h1>
 
-            <h1 className="">{time}</h1>
+            </div>
+
         </div>
 
     );

@@ -12,7 +12,7 @@ const GameCreate = () => {
                 dispatch({type: "UPLOAD_CATALOG", payload: data})
             })
     }, [])
-      return (
+        return (
        <div>
 
            {

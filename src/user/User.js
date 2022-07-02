@@ -19,7 +19,7 @@ import {Link} from "react-router-dom";
                 <div className="">
                     <div className="userPin">
                         <input className="userInput" type="password" placeholder="PIN-код игры"/>
-                     <Link to="/Name">
+                     <Link to="">
                          <button className="userBtn">Подтвердить</button>
                      </Link>
                     </div>

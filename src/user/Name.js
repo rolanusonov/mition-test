@@ -7,7 +7,7 @@ const Name = () => {
             <div className="container">
                     <div className="userPin">
                         <input className="userName" type="name" placeholder="name"/>
-                          <Link to="/Names">
+                          <Link to="">
                               <button className="userBtn">Подтвердить</button>
                           </Link>
                     </div>

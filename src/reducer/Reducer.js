@@ -1,7 +1,7 @@
- 
+import {GET_USER} from "./type";
+
 export const initialState = {
     catalog: [],
-
 
 }
 
