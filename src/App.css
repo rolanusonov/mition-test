@@ -216,8 +216,12 @@ ol {
     background: #6918B4;
     border-radius: 15px;
 }
-
 .gameMin {
+    background: url("./img/Frame 28.png") no-repeat center/cover;
+
+}
+
+.gameMin2 {
     background: url("./img/Frame 28.png") no-repeat center/cover;
     height: 700px;
 
@@ -397,6 +401,7 @@ ol {
 
 
 .gameUsersBtn {
+    margin: 50px;
     cursor: pointer;
     width: 352px;
     height: 65px;
@@ -504,14 +509,12 @@ ol {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -260px;
-    margin-top: 90px;
-}
+
+ }
 
 .spinnerH1 {
     color: #FFFFFF;
-    width: 500px;
-}
+  }
 
 .lds-grid {
     display: inline-block;

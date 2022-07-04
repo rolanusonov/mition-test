@@ -29,7 +29,7 @@ import {useForm} from "react-hook-form";
          })
              .then(data => {
                   toast.success("Успешно отправлено")
-                 navigate('/NamesCards')
+                 navigate('/')
              })
              .catch((errors) => {
                  toast.error('Ошибка')
