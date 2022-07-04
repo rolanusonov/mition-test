@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
-const GamePinCode = () => {
+const GamePinCode = ({el}) => {
     let data = new Date()
     console.log(data)
     const [time , setTime] = useState(10)
 
 
     const router = useNavigate()
-    console.log(router , "router")
-
     useEffect(() => {
         const start = () => {
             setTimeout(() => {
@@ -20,7 +18,7 @@ const GamePinCode = () => {
 
         if (time === 0) {
             setTime(0)
-            router("")
+            router(`/question`)
         } else {
             start()
         }

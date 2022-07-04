@@ -1,21 +1,23 @@
-.userFon{
-    background: url("../img/Frame 36.png") no-repeat center;
-    height: 850px;
-}
-.names{
+.userFon {
     background: url("../img/Frame 36.png") no-repeat center;
     height: 850px;
 }
 
-.userPin {
+.names {
+    background: url("../img/Frame 36.png") no-repeat center;
+    height: 850px;
+}
+
+  .userPin {
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 }
-.userInput, .userName {
-    margin-top: 100px;
+
+.userInput {
     padding: 10px 0 10px 66px;
+    margin: 20px;
     width: 291px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -25,5 +27,11 @@
     color: #000000;
     background: #EBEBEB;
     border-radius: 7px;
-    border: none;
+    border: none;}
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr  2fr ;
+    padding: 30px;
 }

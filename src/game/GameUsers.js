@@ -3,15 +3,18 @@ import {useDispatch, useSelector} from "react-redux";
 import {api} from "../https/api";
 import { useParams} from "react-router-dom";
 import {Link} from 'react-router-dom'
-import appLogo from "../img/image 5.png";
-import appLog from "../img/MOTION TEST.png";
-
+//
+// function timedRefresh(timeoutPeriod) {
+//     setTimeout("location.reload(false);",timeoutPeriod);
+// }
+// window.onload = timedRefresh(10000);
 const GameUsers = ({el}) => {
     const {id} = useParams()
     const dispatch = useDispatch()
     const catalog = useSelector((state) => state.catalog)
     const [theme,setTheme] = useState({})
     const [user,setUser] = useState([])
+
     useEffect(() => {
         api(`/api/v1/theme/${id}`)
             .then(({data}) => {
@@ -28,17 +31,13 @@ const GameUsers = ({el}) => {
 
     const res = [];
 
-
-    user.map((item) => {
+    user.map((item) =>  {
         theme?.test_participants?.map((el) => {
             if (el === item.id) {
                 res.push(item);
             }
         });
     });
-
-    console.log(res)
-
 
     return (
         <div className="gameMin">
@@ -74,7 +73,7 @@ const GameUsers = ({el}) => {
                                     <h2 className="gameUsersWerH1">Присоединились </h2>
                                     <ol>
                                         {res.map  (el =>  (
-                                            <div className="gameUserJus">
+                                            <div key={el.id} className="gameUserJus">
                                                 <h1 className="gameUserH1">{el.name}</h1>
                                             </div>
                                         ))}
