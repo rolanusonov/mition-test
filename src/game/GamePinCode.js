@@ -4,8 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 const GamePinCode = ({el}) => {
     let data = new Date()
-    console.log(data)
-    const [time , setTime] = useState(10)
+    const [time, setTime] = useState(3)
 
 
     const router = useNavigate()
@@ -13,7 +12,7 @@ const GamePinCode = ({el}) => {
         const start = () => {
             setTimeout(() => {
                 setTime(time - 1)
-            },1000)
+            }, 1000)
         }
 
         if (time === 0) {
@@ -22,23 +21,19 @@ const GamePinCode = ({el}) => {
         } else {
             start()
         }
-    } , [time])
+    }, [time])
 
     return (
         <div>
             <div className="Progress">
-
                 <div className="timer">
-                    <div className="timerLine">
-
+                    <div className="timerLine"></div>
+                    <div className="timerBody">
+                        <div className="circleCodeMin">
+                            <h1 className="timeH1">{time}</h1>
+                        </div>
                     </div>
-<div className="timerBody">
-    <div className="circleCodeMin" >
-        <h1 className="timeH1">{time}</h1>
-    </div>
-</div>
                 </div>
-
             </div>
         </div>
     );

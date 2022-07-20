@@ -8,13 +8,17 @@
     width: 1200px;
     margin: 0 auto;
 }
-
+.heroContainer2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .appBg {
     background: url("./img/Frame 26.png") no-repeat center/cover;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 600px;
+    height: 700px;
 }
 
 .appH1 {
@@ -24,18 +28,19 @@
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
+    margin: 0 0 150px 0 ;
 }
 
 .heroAdmin {
     background: url("./img/Frame 28.png") no-repeat center/cover;
-    height: 500px;
-}
+ }
 
 .adminModal {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 60px 0 190px 0;
 }
 
 .lds-ring {
@@ -43,6 +48,7 @@
     position: relative;
     width: 50px;
     height: 50px;
+    margin: 40px 0 70px 0;
 }
 
 .lds-ring div {
@@ -162,6 +168,7 @@
 }
 
 .adminH2 {
+    margin: 10px 0 5px 0;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -174,11 +181,18 @@ ol {
     list-style: circle;
 }
 
+
 .adminInput {
     border: 1px solid #000000;
     border-radius: 3px;
     width: 239px;
     height: 42px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.adminInput::placeholder {
+    padding-left: 70px;
+    font-size: 18px;
 }
 
 .adminBtn {
@@ -219,7 +233,7 @@ ol {
 .gameMin {
     background: url("./img/Frame 28.png") no-repeat center/cover;
 
-}
+ }
 
 .gameMin2 {
     background: url("./img/Frame 28.png") no-repeat center/cover;
@@ -277,9 +291,6 @@ ol {
     line-height: 32px;
 }
 
-.gameHeight {
-    height: 500px;
-}
 
 .gameMinH1 {
     font-family: 'Montserrat', sans-serif;
@@ -626,7 +637,7 @@ ol {
     left: 0;
     z-index: 3;
     background: green;
-    animation: mask_left 10s steps(1,end) forwards;
+    animation: mask_left 3s steps(1,end) forwards;
 }
 .timer:after{
     content: "";
@@ -637,7 +648,7 @@ ol {
     right: 0;
     z-index: 3;
     background: #001355;
-    animation: mask_right 10s steps(1,end) forwards;
+    animation: mask_right 3s steps(1,end) forwards;
 }
 .timerLine{
     z-index: 2;
@@ -647,7 +658,7 @@ ol {
     top: 0;
     left: 0;
     background: green;
-    animation: line 10s linear forwards;
+    animation: line 3s linear forwards;
 }
 @keyframes line {
     0%{
@@ -714,3 +725,5 @@ transform: rotate(360deg);
 .timeLoading{
 visibility: hidden;
 }
+
+

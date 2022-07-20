@@ -1,9 +1,22 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {api} from "../https/api";
+import {toast} from "react-toastify";
 
 
 const GameMin = ({el, id}) => {
 
+    const onSubmit = data => {
+        api.post("/api/v1/theme/", {
+            is_start: true
+        })
+            .then(data => {
+                toast.success("Успешно отправлено")
+            })
+            .catch((errors) => {
+                toast.error('Ошибка')
+            })
+    };
 
     return (
         <div className="">
@@ -17,9 +30,11 @@ const GameMin = ({el, id}) => {
                             </div>
                         </div>
                         <Link to={`/theme/${el.id}`}>
-                            <button className="gameBtn">
-                                Начать
-                            </button>
+                            <form action="" onSubmit={onSubmit}>
+                                <button className="gameBtn" type="submit">
+                                    Начать
+                                </button>
+                            </form>
                         </Link>
                     </div>
                 </div>

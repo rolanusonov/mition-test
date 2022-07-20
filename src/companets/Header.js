@@ -13,16 +13,9 @@ const Header = () => {
                             <img src={logo} alt=""/>
                         </div>
                     </Link>
-
-
-
                     <div>
                         <select name="" id="" className="language">
                             <option value=""> fc</option>
-                            <option value="">2</option>
-                            <option value="">2</option>
-                            <option value="">2</option>
-                            <option value="">2</option>
                             <option value="">2</option>
                             <option value="">2</option>
                         </select>

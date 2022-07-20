@@ -1,19 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
 import {api} from "../https/api";
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {Link} from 'react-router-dom'
-//
-// function timedRefresh(timeoutPeriod) {
-//     setTimeout("location.reload(false);",timeoutPeriod);
-// }
-// window.onload = timedRefresh(10000);
+
+function timedRefresh(timeoutPeriod) {
+    setTimeout("location.reload(true);", timeoutPeriod);
+}
+
 const GameUsers = ({el}) => {
     const {id} = useParams()
-    const dispatch = useDispatch()
-    const catalog = useSelector((state) => state.catalog)
-    const [theme,setTheme] = useState({})
-    const [user,setUser] = useState([])
+    const [theme, setTheme] = useState({})
+    const [user, setUser] = useState([])
 
     useEffect(() => {
         api(`/api/v1/theme/${id}`)
@@ -27,11 +24,12 @@ const GameUsers = ({el}) => {
             .then(({data}) => {
                 setUser(data)
             })
-    },[])
+    }, [])
 
     const res = [];
 
-    user.map((item) =>  {
+
+    user.map((item) => {
         theme?.test_participants?.map((el) => {
             if (el === item.id) {
                 res.push(item);
@@ -57,47 +55,41 @@ const GameUsers = ({el}) => {
                     </div>
                 </div>
             </div>
-                      {res.length === 0 ?
-                        <div className="spinner">
-                            <div className="lds-grid">
-                                <div>   <h1 className="spinnerH1 " >В ожидании игроков...</h1> </div>
-
-
-
-                            </div>
+            {res.length === 0 ?
+                <div className="spinner">
+                    <div className="lds-grid">
+                        <div>
+                            <h1 className="spinnerH1 ">В ожидании игроков...</h1></div>
+                    </div>
+                </div>
+                :
+                <div className="">
+                    <div>
+                        <div className="gameUserMAr">
+                            <h2 className="gameUsersWerH1">Присоединились </h2>
+                            <ol>
+                                {res.map(el => (
+                                    <div key={el.id} className="gameUserJus">
+                                        <h1 className="gameUserH1">{el.name}</h1>
+                                    </div>
+                                ))}
+                                <h1 className="gameUserLength">
+                                    Игроки:{res?.length}
+                                </h1>
+                            </ol>
                         </div>
-                        :
-                        <div className="">
-                            <div>
-                                <div className="gameUserMAr">
-                                    <h2 className="gameUsersWerH1">Присоединились </h2>
-                                    <ol>
-                                        {res.map  (el =>  (
-                                            <div key={el.id} className="gameUserJus">
-                                                <h1 className="gameUserH1">{el.name}</h1>
-                                            </div>
-                                        ))}
-                                        <h1 className="gameUserLength">
-                                            Игроки:{res?.length}
-                                        </h1>
-                                    </ol>
-                                </div>
 
-                                <div className="gameUsersName">
-                                    <Link to="/gameUsersLoading">
-                                        <button className="gameUsersBtn">
-                                            Начать игру
-                                        </button>
-
-
-                                    </Link>
-
-                                </div>
-                            </div>
-
+                        <div className="gameUsersName">
+                            <Link to="/gameUsersLoading">
+                                <button className="gameUsersBtn">
+                                    Начать игру
+                                </button>
+                            </Link>
                         </div>
-                    }
-         </div>
+                    </div>
+                </div>
+            }
+        </div>
     );
 };
 

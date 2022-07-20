@@ -24,17 +24,11 @@ const GameUsersLoading = () => {
         <div>
             <div className="Progress">
                 <div className="progress">
-                    <div className="progressBac">
-                        
-                    </div>
+                    <div className="progressBac"></div>
                 </div>
-                <h1 className="progressH1">
-                    Идёт загруска
-                </h1>
+                <h1 className="progressH1">Идёт загруска</h1>
                 <h1 className="timeLoading">{time}</h1>
-
             </div>
-
         </div>
 
     );

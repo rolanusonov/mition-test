@@ -1,14 +1,16 @@
 .userFon {
     background: url("../img/Frame 36.png") no-repeat center;
-    height: 850px;
-}
+ }
 
 .names {
     background: url("../img/Frame 36.png") no-repeat center;
-    height: 850px;
-}
 
+}
+.userMar{
+    padding: 90px 0 190px 0;
+}
   .userPin {
+
     display: flex;
     align-items: center;
     justify-content: center;

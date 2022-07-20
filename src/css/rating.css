@@ -1,0 +1,159 @@
+.ratingRD {
+    display: flex;
+    justify-content: center;
+}
+.ratingHGg{
+    padding: 20px 0 90px 0;
+}
+.ratingHG{
+ }
+.ratingR {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 67px;
+}
+
+.ratingD {
+    background: #EBEBEB;
+    border-radius: 21px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    width: 30%;
+}
+
+.ratingH1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.ratingBtn {
+    background: #6918B4;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 10px 40px 10px 40px;
+    border: none;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.27);
+}
+
+.ratingBTN {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ratingDyg {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ratingCard {
+    width: 153px;
+    margin: 20px;
+}
+
+.ratMen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingIP {
+    margin: 5px;
+}
+
+.ratingColor {
+    color: #FFFFFF;
+}
+
+.ratingMenMIn {
+    background: #6225E6;
+    height: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.ratingMenMIn2 {
+    background: #00B749;
+    height: 288px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.ratingMenMIn3 {
+    background: #3000F0;
+    height: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.ratingE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.ratingE4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 504px;
+}
+
+.ratingE4D {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 404px;
+    height: 62px;
+    border-radius: 21px;
+    border: solid 1px #620857;
+}
+
+.ratingI {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingEH2 {
+    color: #FFFFFF;
+    margin: 10px;
+}
+
+.ratingEBtn {
+
+    margin: 40px;
+    width: 210px;
+    height: 63px;
+    background: #6918B4;
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
